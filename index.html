@@ -10,8 +10,18 @@
 <body>
 
 <header>
-    <div class="logo"><img src="logo.png"></div>
-    <nav>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    
+    <!-- bouton hamburger pour mobile -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav class="nav-links">
         <a href="#accueil">Accueil</a>
         <a href="#apropos">Qui sommes-nous</a>
         <a href="#bonjour">Circuits</a>
@@ -107,7 +117,7 @@ Nous privilégions les petits groupes, l’authenticité des rencontres, la déc
   </div>
 
   <div class="travel-card">
-    <img src="Sefar/PHOTO-2025-12-20-12-44-30 (1).jpg">
+    <img src="miniaturesefar.jpg">
     <div class="card-content">
       <h3>Circuit Sefar en Algérie</h3>
       <p>7 jours / 7 nuits</p>
@@ -145,7 +155,7 @@ Nous privilégions les petits groupes, l’authenticité des rencontres, la déc
   </div>
 
   <div class="travel-card">
-    <img src="decouverte/IMG_2010.jpeg">
+    <img src="IMG_2010.jpeg">
     <div class="card-content">
       <h3>Circuit Découverte en Tunisie</h3>
       <p>7 jours / 6 nuits</p>
@@ -158,7 +168,7 @@ Nous privilégions les petits groupes, l’authenticité des rencontres, la déc
   </div>
 
   <div class="travel-card">
-    <img src="maisondhote/IMG-20260222-WA0022.jpg">
+    <img src="miniature.jpg">
     <div class="card-content">
       <h3>Maison d'hotes en Tunisie</h3>
       <p>Nos tarifs s'adaptent à la durée de votre séjour</p>
@@ -260,6 +270,13 @@ Nous privilégions les petits groupes, l’authenticité des rencontres, la déc
 </footer>
 
 
+<script>
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
 </body>
 </html>
